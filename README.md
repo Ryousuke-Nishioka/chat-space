@@ -1,8 +1,9 @@
 # README
 
-###DB設計図
+### DB設計図
 
-##group_user
+## group_user
+
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -11,7 +12,7 @@
 belongs_to :group
 belongs_to :user
 
-##group
+## group
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, default:|
@@ -19,18 +20,18 @@ belongs_to :user
 - belongs_to :group
 - belongs_to :user
 
-##messages
+## messages
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
 |image|string|null: false, default:|
-|user|references|null: false, foreign_key: true, index: true|
-|group|references|null: false, foreign_key: true, index: true|
+|user_id|integer|null: false, foreign_key: true, index: true|
+|group_id|integer|null: false, foreign_key: true, index: true|
 ### Association
-- belongs_to :user
-  has_many   :messages
 
-##users
+
+
+## users
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, default: |
@@ -38,6 +39,6 @@ belongs_to :user
 
 
 ### Association
-- has_many  :messages
+ has_many  :messages
   
 
