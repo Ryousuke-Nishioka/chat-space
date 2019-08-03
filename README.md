@@ -17,8 +17,8 @@
 |------|----|-------|
 |name|string|null: false, default:|
 ### Association
-- has_many :messages, through
-- has_many :user, through
+- has_many :messages
+- has_many :through: :group_users
 
 ## messages
 |Column|Type|Options|
@@ -29,7 +29,7 @@
 |group_id|integer|null: false, foreign_key: true, index: true|
 ### Association
 - belongs_to :user
-- has_many :messages
+- belongs_to :messages
 
 
 ## users
