@@ -19,6 +19,7 @@
 ### Association
 - has_many :messages
 - has_many :through: :group_users
+- has_many :group_users
 
 ## messages
 |Column|Type|Options|
@@ -29,7 +30,7 @@
 |group_id|integer|null: false, foreign_key: true, index: true|
 ### Association
 - belongs_to :user
-- belongs_to :messages
+- belongs_to :group
 
 
 ## users
@@ -43,5 +44,4 @@
  - has_many  :messages
  - add_index :users, :name,     unique: true
  - add_index :users, :email,    unique: true
- 
-
+ - has_many  :groups
