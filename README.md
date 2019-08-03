@@ -18,7 +18,7 @@
 |name|string|null: false, default:|
 ### Association
 - has_many :messages
-- has_many :users, through: :group_user
+- has_many :users, through: :group_users
 - has_many :group_users
 
 ## messages
@@ -44,4 +44,5 @@
  - has_many  :messages
  - add_index :users, :name,     unique: true
  - add_index :users, :email,    unique: true
- - has_many  :group_user,through: :groups
+ - has_many  :groups, through: :group_users
+ - has_many  :group_users
