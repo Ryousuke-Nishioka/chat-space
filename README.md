@@ -9,8 +9,8 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-belongs_to :group
-belongs_to :user
+- belongs_to :group
+- belongs_to :user
 
 ## groups
 |Column|Type|Options|
@@ -40,7 +40,7 @@ belongs_to :user
 
 
 ### Association
- has_many  :messages
+ - has_many  :messages
  - add_index :users, :name,     unique: true
  - add_index :users, :email,    unique: true
  
