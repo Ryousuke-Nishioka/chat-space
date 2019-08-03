@@ -41,7 +41,7 @@ belongs_to :user
 
 ### Association
  has_many  :messages
- add_index :users, :name,     unique: true
- add_index :users, :email,    unique: true
+ - add_index :users, :name,     unique: true
+ - add_index :users, :email,    unique: true
  
 
